@@ -1,0 +1,58 @@
+{
+  "assertions": {
+    "checked_reference_count": true,
+    "full_dataset_count": true,
+    "invalid_fixture_rows": true,
+    "split_distribution": true,
+    "task_distribution": true,
+    "unique_case_keys": true,
+    "valid_fixture_accepted": true
+  },
+  "dataset_hash": "1c385bb4d14916d03b58e7aee1b926ff80845740961580745e6edae4646e3daa",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13"
+  },
+  "generated": {
+    "by_split": {
+      "development": 80,
+      "held_out": 160
+    },
+    "by_task": {
+      "abstention": 48,
+      "adversarial": 48,
+      "grounded_qa": 48,
+      "structured_extraction": 48,
+      "tool_use": 48
+    },
+    "count": 240,
+    "reference_checked": 30
+  },
+  "jsonl": {
+    "invalid_import": {
+      "accepted": 1,
+      "errors": [
+        {
+          "message": "Expecting property name enclosed in double quotes: line 1 column 27 (char 26)",
+          "row": 2
+        },
+        {
+          "message": "duplicate case_key: VALID-ONE",
+          "row": 3
+        }
+      ]
+    },
+    "known_answer": {
+      "accepted": 5,
+      "errors": []
+    }
+  },
+  "kind": "deterministic_fixture_validation",
+  "limitations": [
+    "No HTTP, worker, provider, or browser execution is measured by this runner."
+  ],
+  "passed": true,
+  "reference_date": "2026-09-01",
+  "seed": 2406,
+  "version": "1.0"
+}

@@ -1,0 +1,26 @@
+# Implementation status
+
+Updated: 2026-09-28. The local synthetic pilot is implemented and its main path has been exercised. This record distinguishes completed local evidence from deployment and live-model work.
+
+## Acceptance path
+
+- [x] Import/version JSONL data and show row-level errors in integration tests.
+- [x] Save two configurations with validated options and server-only target secret references.
+- [x] Run the bundled target against identical cases with persisted outputs and progress; cancellation, budget and recovery are covered in tests.
+- [x] Compare paired outcomes, inspect evidence, and save blinded human decisions.
+- [x] Apply a release gate and export the report. Seeded regression `fail`/CLI exit 1, repaired candidate `pass`/exit 0, and full 240-pair run `pass`/exit 0 were recorded.
+- [x] Verify basic workspace isolation, denominator accounting, review lifecycle, cost arithmetic and fixed-seed bootstrap in the 15-test backend suite.
+- [x] Run four browser journeys plus a focused modal-keyboard journey, and capture eight real screenshots at 1440, 1024 and 390 px with zero console/page errors and zero horizontal overflow.
+- [x] Checkpoint the experiment lifecycle in LangGraph through bounded scheduling, case execution, aggregation, human-review interrupt/resume, and finalization. An isolated process kill/restart/resume exercise completed.
+- [x] Add workspace-scoped, dry-run-first content redaction for old terminal experiments. A direct isolated-database core test and live demo-database dry run passed; the CLI rejected an apply without matching confirmation with exit 2. Pytest collection for the added retention file did not complete on this host.
+
+## Environment findings
+
+- The folder initially contained only the product brief and was not a Git repository. A local `main` repository was initialized for the delivery; its current commit is available with `git rev-parse HEAD`.
+- Docker Desktop 4.49.0 initially built the locked API and web images, and `docker compose config --quiet` passed. The first Compose attempt lost `containerd` and logged an internal `dockerInference` socket error. After the engine returned, `docker compose up -d --no-build --pull never` reached healthy PostgreSQL and `init` exit 0; Alembic migration and synthetic seed succeeded. The API initially started, then Docker log/image/containerd metadata reads returned `input/output error`. A later `docker compose build api` failed on containerd `meta.db` with I/O error. C: was nearly full (about 0.01 GB free); moving 301 old temporary trace files reversibly to `D:\Projects\My projects\resume\.host-temp-recovery\rdclient-traces-20260928` raised free space to about 5 GB, but the error persisted. With 25 unrelated containers active, no global restart was attempted. This project's Compose services were stopped. Full API/worker/web smoke remains unverified. Compose uses the cached PostgreSQL 17.11 tag, a shared API image, and no host database port.
+- The local backend used Python 3.12.13, uv 0.11.28, and the locked dependencies. The graph suite passed 15/15, and four later adapter-validation checks passed. Whole-package Ruff and mypy passed after the retention change (17 source files). The new Markdown and retention core assertions passed by direct isolated execution; a fresh full pytest run after those additions was not completed. Web lint, type check, build, OpenAPI contract check, four primary Playwright paths, and one focused keyboard path passed. After the Docker I/O failure, the restored SQLite preview returned HTTP 200 for API `/health`, web `/`, and the web proxy `/api/v1/health`; admin login worked. The existing 240-pair experiment with six reviews still had gate `pass`, and Markdown export returned HTTP 200 (2,732 bytes).
+- The full bundled run used one worker and concurrency 1 to limit CPU load: 480/480 case executions, 240/240 pairs, 0 failures, 16 improvements, 0 regressions; after six blinded decisions the gate passed. These are synthetic fixture results.
+
+## Next actions
+
+The [full-run JSON artifact](../evals/results/full_bundled_run_2026-09-28.json) and [direct CLI exit-code record](../evals/results/REPORT.md) are saved. The original process-level worker interruption/restart was verified: 50/80 completed before kill and 79/80 completed plus one uncertain after recovery, with zero duplicate score keys. A later isolated experiment-graph recovery test likewise reached 79/80 completed plus one uncertain run, then resumed its review interrupt; its release decision was `incomplete` and CLI exit code 2. A real-model smoke remains pending because no provider credential was available. PostgreSQL migration and demo seed have now passed inside Compose; after Docker's metadata I/O fault is repaired, rebuild the API and web images from current source and finish API/worker/web container smoke, backup/restore test, outbound egress checks against DNS rebinding, dependency notices/SBOM review, and a representative customer dataset. The direct SQLite preview remains the verified fallback. The retention command excludes immutable source cases, shared target/configuration records, logs, backups and exported files; agree on separate disposal for those copies.

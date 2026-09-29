@@ -1,0 +1,579 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-28T01:53:18.949102+00:00",
+  "experiment_id": "62283a81405e497d968e4f7a0407adad",
+  "experiment_name": "Full 240-pair policy repair · synthetic",
+  "experiment_status": "completed",
+  "source": "bundled_fixture",
+  "decision": "pass",
+  "gate": {
+    "id": "80286c0c493445d4b3f97ad6f8491cbc",
+    "name": "No regression gate",
+    "thresholds": {
+      "min_task_delta": 0.0,
+      "max_regressions": 0
+    },
+    "failures": []
+  },
+  "provenance": {
+    "dataset_version_id": "c56f35c6dfe84e899a2c69bc9792002c",
+    "dataset_content_hash": "1c385bb4d14916d03b58e7aee1b926ff80845740961580745e6edae4646e3daa",
+    "selected_case_ids": [
+      "51e8c1fcb05941829d5f5007818b6d8b",
+      "83c9d3387ef7485387e40ef9901cb4b5",
+      "c2440d523c534263aedd0b07e69c8fe8",
+      "2b0804cbf8f8481ab44063dbfd89c06c",
+      "d0846020ca1a4600a9f37e118a1def21",
+      "695ade19a0cf42f8962fff034c938e24",
+      "4368a4a079904d729804babd1c1b0d3e",
+      "1a3895a9f03a46f795d50c53847681f4",
+      "81029781e5c340a191b5ac5cd725576f",
+      "28ba9fa405784e8e9f61b8c0ad16e077",
+      "c2ec723cc176455bafbe8fbfaa3e2518",
+      "f23dd750518a4e52976b8f7311a9dc96",
+      "b9276e4feb0d48f196fa7fe5969aaea1",
+      "ebfbd43cca714bb1929af8bfdbbe7ab4",
+      "60e4d904db154b6dbb1371c208fbedf4",
+      "9da3a8b2c23f4acba2cba4fe31d5ab83",
+      "14ec68ce6da143229e41bb3c042c85c0",
+      "debfd4e2129842e6a28aaa7658525598",
+      "c769cac4d97848cf9ee88da3f05bc210",
+      "1755adc654004d58b6a1d7f496e075ff",
+      "eb8250e7ae9041d09734e3df5027ff3a",
+      "169295db473c436f8ee6757cd2970df1",
+      "4dd010c5a63b4e7cabc7f1c95a87ec74",
+      "d9815c0ca29442fca50dd7e2549fdcf2",
+      "6bcf873a698a406a8cc80e4e254778fe",
+      "f916544439ce4ae8ad89bba9246744e1",
+      "b99bb2009be3469ba255c8fa0a2395f0",
+      "cb05a18fe7a54917866f3098eb95a3f2",
+      "43c96397d74440ba924093016d183b21",
+      "724dd91e0d8247eaa3c7b58a5b2f6f7a",
+      "851f130f27d549b697e20b1962dd4c8b",
+      "8b313d551ebc41ddba68a875403d2b16",
+      "6a19c79d093149059fd387c981a5516b",
+      "517e7d8321be4accaeec7eb9a2dc0e09",
+      "126fc369d8d44215b36be3427eaa7100",
+      "02d8fcbb21cb49b8b6c252de9c28be8b",
+      "b6613e4183804d77a79d9fe1255d93e2",
+      "6c18adc61a514ffb91e2e0ffbf314d81",
+      "fc21dfd22df648c2a854587db03755bb",
+      "f25d193775a74b60b077e2700633af54",
+      "258c1b78d0e9437cbd15982dddc4e599",
+      "41d016087b22442d8fee99cd7ca103a6",
+      "3bc696921f5b4166b1b0597f099399f3",
+      "e1258dbc179f4d21895cf2beb0414c8c",
+      "cd8c0dab381a4c429adb07743f767731",
+      "62d7902814454cadaced3a65b588f5cd",
+      "57ca37bce2d443b89de871497b4aabc1",
+      "077b8c674527469ba0020439f52bffa8",
+      "1bc6361b17854dc4b464eb4e3e0a6a85",
+      "ca4b126841ef4d2f8df93739855874b5",
+      "f15194ca2a54421d8275b0b09903317c",
+      "53203024028a4842a12babee0003166a",
+      "fa8d82663d9a4fc596631fedb035bfd0",
+      "456d856764f04eaab3623230a5888b7c",
+      "25220e9c96d0456eb88a008d4592ab8e",
+      "6e7cd19ca8f04e908f8147f3731a92c4",
+      "6a765ff51e65477a81e873e7bfc62afa",
+      "bcfb8ca1ee054396884ee5691b383a9c",
+      "24fac464f3c348a48c09443472b4007a",
+      "26c7c9f5d00e4108bca65516a23c7024",
+      "b09f22f400964379baa39ce9ebc210e3",
+      "db57dbddb34243189a5b634b124a69ec",
+      "7e22d8f2a2e34d1aa7e761bf588538e1",
+      "7e7936cee0ec4343b94f6f50f17398d2",
+      "b52b191af66b4717b5c1ecf8c5205442",
+      "27bfadedb38549d2ac1a55bbf3aeb1c2",
+      "fc216d30cffb42be85fd5e6b2a3249a4",
+      "29205347e4ec43e1a8feb5ee741190fe",
+      "9909c581d68944d39988fa90a2ccc1de",
+      "87b38c00f395448fad84ae4d2139cb17",
+      "8d5c6cbf4de24bfab27dc4f806e581e6",
+      "59468dcc89c544cca89c31133569c0a2",
+      "cb44bc76516b434dbc3b561cc9c01d5c",
+      "7972c4b950f343808c6ce452cba297e2",
+      "cef85e3c8b8e4b4ea7ada685d826b7dc",
+      "2e04be6220524fb99bed393a8aef5174",
+      "a39af55aa60b431a86358f24196524ad",
+      "ccc54d89fa5c4ae4baf01ba94e16eb52",
+      "55039184cd09487a833bbe3f84682017",
+      "a85917c99ba946dd863bff1cc1e1c1d9",
+      "41025ea99b48458495da4b209701950c",
+      "2f1ab7620a4a49cdb47c9429ce5e6c63",
+      "41d7a0faf8eb4219b49547a6a04fe3dc",
+      "0ea61789b7e44633bc3c4a683dd27cb6",
+      "80fe84ad4d264640be8698132121a60c",
+      "9748851f9f824cfb9c3100c5cad2fc55",
+      "4f41bb69b18541cdb27bf2b168cbb985",
+      "076c079038ab48ad88dc7780245a4ccf",
+      "59d7c898cfd845648f540ce6a21af1cd",
+      "ea85f3f3d3c54a4691b4f40849919d52",
+      "88cab5b9b36c465197e7e2dfc742f7aa",
+      "7eb79386d99547f4826f9ee39e1953a5",
+      "9d0584aef1074138bc4bcb62825b3204",
+      "544f84dcfdc9416e872abd038a9252fb",
+      "4d5dc9de00e744c597fbc5795108f695",
+      "1b3a8c8b1e0f4c29afa8660374a3f73f",
+      "7f76d944152943e1b3ad54a058a793ff",
+      "36f918fc260f424ca925b2614ae16601",
+      "db0ce697755e485da5bda3f7430eddc8",
+      "1c879339d1ca4167aec04f71e1f5c172",
+      "a7c1e1bfd58f4ac7acbbad96cbe58e86",
+      "50fbd1ad75cb416483ef335d2c4ed932",
+      "deccea51feab49efa547bb51ed634f8a",
+      "c9dfaadf314948aea0c42c77e6f33959",
+      "a1a8e72ab6ce409bb14c770a7cffb2f5",
+      "a9276e277c8e49debbcff64363120654",
+      "b6f6c16b66fb41669eabb83517737a41",
+      "0ce449f6cd024711b005a8816dadde38",
+      "6a3e7b9963594979aaa3fa2f1d730f7b",
+      "1c4e10760ba349189a06e1c8e03e44ce",
+      "bf49a07607b344efbb7b3388cc3eb32a",
+      "4d0b1529e21a43608172ea2cc5e056f0",
+      "42c7e99aa9fe49bcbcfc796816025fe9",
+      "527257511d3f4c6b93f2c8f948bc9e3e",
+      "e5e18f683c9c4711a498588a9902fbc4",
+      "af51cf5f693b4f84b1f396b1b0b19e2e",
+      "83e4d10ab4dc4f3ca6daac6b4b883338",
+      "8be9be3984d44def88e6e31097499699",
+      "86b1f51004fd4dc7ad87a44a0e9989c2",
+      "2de26f58dd984942b3df3422d5b6c963",
+      "7bc7d4ac57bd458a8aae59e9032e3428",
+      "6a29722b39874125a862414cacbd3bcd",
+      "4d77865ecc874223b9855dccf215140e",
+      "7d744bf9d7aa4490b888851e95737d68",
+      "a633b9e7c5534dd29ea97cd13d2742ff",
+      "dc874efbb0634e02bad943096c4c6ce6",
+      "2c1cf2609f9c4494905c24790766031b",
+      "97e624bcd92a4cfe85ad6b1c8307bf21",
+      "e204c07c76c34a7ab0e07febf36c4803",
+      "24407c900d2f40738db57dc14ef961bd",
+      "00226724d2614e1e94aab52aad12bbb3",
+      "378e5188d22940aa98f7627fd815374e",
+      "e42a75c3d261472dac3fa38947f5162f",
+      "03be08f14e614f7194856646b8b79613",
+      "474778da8823476c8f094c027f3315c6",
+      "0181ce8b57f446c5a8005b17a07bff88",
+      "4feaa45e88f6400390d052d1d898167a",
+      "615d270651b94a589c05a6dbf2af4a09",
+      "28c303c4e96f4703ba68a80e490224ad",
+      "089a257331fe4dd9875d180d5d859987",
+      "fbc2aad374ae4f10adf43f4ec73e44d9",
+      "ec3cb746e35c4abbbd8e358d3761f1ae",
+      "a6b3f0631a244422b77fdfc259363b97",
+      "82d317ac1c0f4ed687ca6a161cd7e062",
+      "42fa2ad6faa9498faf18b1a6274a3280",
+      "7d1fcf2c3bcc49ae8f7a0450400ded90",
+      "d81a593df05c484c8b95905603b4cbc8",
+      "320d3a3953954f82b678cf8524c00c79",
+      "4b01eb097ed1494f9a6fe922e36e0fdf",
+      "70dd7335bba8403d83ff09d3c9f51595",
+      "c3a4471d78024967991b9b4be2c4c860",
+      "28db3b64f0f74f468d69cdef69fec5c0",
+      "b293d2c01ec747ce813712adba82c032",
+      "299bbfb79b8d4ceeb0e518f28dbe305f",
+      "8d15b180147c446d812522ac88bc1084",
+      "011cb2c9ed0b4545bb612beefc58f33f",
+      "997143c0ff5246d58942e4dca3b70b80",
+      "0a9e6ea481b6405d9d89f73078b310e0",
+      "bb8a0b1425034be3a9aa64d414e36b6d",
+      "23082211178942958ee1beb83aa4a299",
+      "5c071f7eb564436dbe2cf8f8a8b9a86e",
+      "519cdee28c0745ec8f7d06aef6a2cd69",
+      "e4e685af0dcd4884bbf8a718726accde",
+      "4579aed52f434a79802f87eb79d992b6",
+      "facb347e4b0140ab8d0cfc4bdc334d95",
+      "1fbb95569986493ca300498f09c195bc",
+      "4aefdf49a1204e27bc738980f6771f3d",
+      "a1b439788edc4118830dfab7a76074fb",
+      "b6f26572ad314f12b5f75a7c8725088d",
+      "2c2eab8ba4614eb899c4dd0a8837e175",
+      "0ed7767a8db345b78ccb4420f8e52055",
+      "dd916c7156d74354b63e463ed2e2e327",
+      "81d8fc24c8e84896a3be25e6298b9cf4",
+      "028e3dc228454c17a470d1ae734e02ab",
+      "0a05daa471714db5a95e64d500fc7aa8",
+      "187cafe9d92041979bd0bc4be85b225a",
+      "ef6343fc61424ba888dd7e61948806af",
+      "4dfe60a29368478c968feee698f29946",
+      "594c109986174739a42b269f27fae0f3",
+      "d517499ff0d44f90abb0b9a73c21070b",
+      "ba68a17a845d49918614b948986792d6",
+      "b4d100ac5368402094a2034d6489386d",
+      "78f00807493248fabe9d6b97f3a36c43",
+      "ba5cbabdb854429ebfc1bfd1790cc4c0",
+      "09dc4651c0214da589b479b77c5e566a",
+      "3b9625d2cafe4c96825569fa37a8fc0b",
+      "9085189f54ee4bf2a615321ab1330c71",
+      "8ba5eb2e7f8d43509b3a187c44e3c5d1",
+      "10404801bec64a8da430ba3e1383f836",
+      "ffb1b141f84747bda8812c6ec843d8ad",
+      "06bdfa9d6d3e406192bfa74514e41f65",
+      "ed7761a0cc5d4f4399c886cf4949ee62",
+      "7b2c34cc1a424a2e898528c694e06837",
+      "d070a44f8fef4c4083adf0db72a10962",
+      "4383c4b3ac8f442e8d150fa848f24341",
+      "17de1c8555344569b7ff4ad2ed46f4e0",
+      "d3e8466904fb4225b3a5979f943f7e23",
+      "207cb2dda8be4e66b506179496af9a33",
+      "703413c67a254e71ab5494708d391996",
+      "7d8ce35ab90944c5b237fc90b9dd418d",
+      "def7dbfd64a140728b1088ff08533f95",
+      "450e3f89cc53441b976b7129ef5270e4",
+      "88b4052ff657467e9856c698e650f64e",
+      "a38a461057b3402fafb080929b1d3b55",
+      "9ff818f538654b53bf8bb96dac98be5a",
+      "2bedb254b26140bd8f9dc041377ca3e9",
+      "e399bf40ec1147938c9dc881e59462fe",
+      "d433a1c39b9c498c8bf72c78da14d023",
+      "c74544a264884c688f16c43af3e55375",
+      "faf120e8f7ec4474addd5b91ad35a8df",
+      "9ede6ddd0cab40649421dbaea9e60059",
+      "39746b0e5c6f4679a232f139a8862053",
+      "20f4f58fef1842699f8a7975d7da1dd2",
+      "7be5c84166754e3e9eed7477a21343cd",
+      "18693ffa2daf47b79aaa6f63b78f40a9",
+      "79661cf9d5e5493cb865c1688a0a67da",
+      "8e1991ac93584b2ab940a7857d38f4e8",
+      "6bcd6cc4c6c24f67bbe622bbf9675b4e",
+      "edde350d2f5741b5a8cbda78611c2e41",
+      "6c6f81ea8b0540e386739efd0f8eb3ad",
+      "6deb305f8b2748b98b831377f6f62b9a",
+      "b7648b1978ee4354a3ac4545a4a46834",
+      "43fbd795096d4b70b253875cd1825c44",
+      "c7719339668a4eeba092ec9fb4987b19",
+      "ae29f821958149d096e4f3cc374de206",
+      "c4b4901ab6bf436186da0bd99ccbe44b",
+      "1c9a8c022d334ac6b59f4b9b50387f06",
+      "33f131b39f8f4d4dbd922887daea752f",
+      "5d556e6a928242679faa69a310ad87c9",
+      "f7f7fa71df41474e8fd2939768914760",
+      "5858ff4fbb2a4125919fe1097edb748c",
+      "b212b16464d24f02bb5e1fa8947e5258",
+      "98fdbf09c6c34f979015f6c114d83b5a",
+      "42636f38125644f69f8d8919d3beb77c",
+      "29e2d10db0d94a0092123322bc9f42b7",
+      "8b64306861d84daaaad6d408a75c1cab",
+      "9f80f847e079425ca2022c5902471315",
+      "e526c467f0924e6eb22ce33da3978c73",
+      "825749ddff364dd7a81e08b1c9e44709",
+      "8cf744ab18824f619451a33e25ac3e7f"
+    ],
+    "split": "all",
+    "repetitions": 1,
+    "evaluator_version": "1.0.0",
+    "metric_keys": [
+      "abstention_correct",
+      "action_correct",
+      "citation_support",
+      "exact_match",
+      "latency_ms",
+      "normalized_match",
+      "retrieval_recall",
+      "structured_task_correct",
+      "structured_valid",
+      "token_cost_usd"
+    ]
+  },
+  "review_summary": {
+    "assignments": 6,
+    "decisions": 6,
+    "by_status": {
+      "reviewed": 6
+    },
+    "by_label": {
+      "tie": 5,
+      "right": 1
+    }
+  },
+  "counts": {
+    "total_runs": 480,
+    "completed_runs": 480,
+    "failed_runs": 0,
+    "cancelled_runs": 0,
+    "regressions": 0,
+    "improvements": 16,
+    "planned_pairs": 240,
+    "paired_count": 240,
+    "missing_pairs": 0,
+    "pending_reviews": 0
+  },
+  "primary": {
+    "description": "Task-specific paired correctness; no universal quality score.",
+    "by_task": {
+      "grounded_qa": {
+        "mean_delta": 0.16666666666666666,
+        "a_mean": 0.8333333333333334,
+        "b_mean": 1.0,
+        "a_success_count": 40,
+        "b_success_count": 48,
+        "count": 48,
+        "planned_count": 48,
+        "confidence_interval": [
+          0.0625,
+          0.270833
+        ]
+      },
+      "tool_use": {
+        "mean_delta": 0.0,
+        "a_mean": 1.0,
+        "b_mean": 1.0,
+        "a_success_count": 48,
+        "b_success_count": 48,
+        "count": 48,
+        "planned_count": 48,
+        "confidence_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "structured_extraction": {
+        "mean_delta": 0.0,
+        "a_mean": 1.0,
+        "b_mean": 1.0,
+        "a_success_count": 48,
+        "b_success_count": 48,
+        "count": 48,
+        "planned_count": 48,
+        "confidence_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "abstention": {
+        "mean_delta": 0.0,
+        "a_mean": 1.0,
+        "b_mean": 1.0,
+        "a_success_count": 48,
+        "b_success_count": 48,
+        "count": 48,
+        "planned_count": 48,
+        "confidence_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "adversarial": {
+        "mean_delta": 0.16666666666666666,
+        "a_mean": 0.8333333333333334,
+        "b_mean": 1.0,
+        "a_success_count": 40,
+        "b_success_count": 48,
+        "count": 48,
+        "planned_count": 48,
+        "confidence_interval": [
+          0.0625,
+          0.270833
+        ]
+      }
+    }
+  },
+  "metrics": [
+    {
+      "metric_key": "exact_match",
+      "label": "Exact answer match",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 0.9166666666666666,
+        "count": 192
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 192
+      },
+      "delta": 0.08333333333333333,
+      "paired_count": 192,
+      "confidence_interval": [
+        0.046875,
+        0.125
+      ]
+    },
+    {
+      "metric_key": "normalized_match",
+      "label": "Normalized answer match",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 0.8333333333333334,
+        "count": 96
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 96
+      },
+      "delta": 0.16666666666666666,
+      "paired_count": 96,
+      "confidence_interval": [
+        0.09375,
+        0.239583
+      ]
+    },
+    {
+      "metric_key": "structured_valid",
+      "label": "Structured output valid",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 1.0,
+        "count": 48
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 48
+      },
+      "delta": 0.0,
+      "paired_count": 48,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "metric_key": "structured_task_correct",
+      "label": "Extraction and abstention correct",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 1.0,
+        "count": 48
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 48
+      },
+      "delta": 0.0,
+      "paired_count": 48,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "metric_key": "action_correct",
+      "label": "Expected action and arguments",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 1.0,
+        "count": 48
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 48
+      },
+      "delta": 0.0,
+      "paired_count": 48,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "metric_key": "retrieval_recall",
+      "label": "Expected evidence recall",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 1.0,
+        "count": 96
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 96
+      },
+      "delta": 0.0,
+      "paired_count": 96,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "metric_key": "citation_support",
+      "label": "Reference-consistent citation",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 0.8333333333333334,
+        "count": 96
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 96
+      },
+      "delta": 0.16666666666666666,
+      "paired_count": 96,
+      "confidence_interval": [
+        0.09375,
+        0.239583
+      ]
+    },
+    {
+      "metric_key": "abstention_correct",
+      "label": "Correct abstention",
+      "unit": "fraction",
+      "direction": "higher",
+      "a": {
+        "mean": 1.0,
+        "count": 96
+      },
+      "b": {
+        "mean": 1.0,
+        "count": 96
+      },
+      "delta": 0.0,
+      "paired_count": 96,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "metric_key": "latency_ms",
+      "label": "Inference latency",
+      "unit": "ms",
+      "direction": "lower",
+      "a": {
+        "mean": 6.043080001472845,
+        "count": 240
+      },
+      "b": {
+        "mean": 6.97850041736577,
+        "count": 240
+      },
+      "delta": 0.9354204158929255,
+      "paired_count": 240,
+      "confidence_interval": [
+        -0.810334,
+        3.282027
+      ]
+    },
+    {
+      "metric_key": "token_cost_usd",
+      "label": "Known token cost",
+      "unit": "USD",
+      "direction": "lower",
+      "a": {
+        "mean": 0.0,
+        "count": 240
+      },
+      "b": {
+        "mean": 0.0,
+        "count": 240
+      },
+      "delta": 0.0,
+      "paired_count": 240,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic demo results do not establish real-customer model quality.",
+    "Confidence intervals are paired bootstrap intervals only when at least 30 comparable pairs exist.",
+    "Unknown provider prices remain unknown and are excluded from cost means."
+  ]
+}

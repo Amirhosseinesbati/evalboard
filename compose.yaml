@@ -1,0 +1,71 @@
+services:
+  db:
+    image: postgres:17.11-alpine3.24
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-evalboard}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-evalboard_demo}
+      POSTGRES_DB: ${POSTGRES_DB:-evalboard}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-evalboard} -d ${POSTGRES_DB:-evalboard}"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build: ./apps/api
+    image: evalboard-api:0.1.0
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://evalboard:evalboard_demo@db:5432/evalboard}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-false}
+      EVALBOARD_DEMO: ${EVALBOARD_DEMO:-1}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      HTTP_TARGET_ALLOWLIST: ${HTTP_TARGET_ALLOWLIST:-}
+      LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-evalboard}
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:${EVALBOARD_API_PORT:-8010}:8000"
+
+  worker:
+    image: evalboard-api:0.1.0
+    command: ["uv", "run", "--frozen", "python", "-m", "evalboard.worker"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://evalboard:evalboard_demo@db:5432/evalboard}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-false}
+      EVALBOARD_DEMO: ${EVALBOARD_DEMO:-1}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      HTTP_TARGET_ALLOWLIST: ${HTTP_TARGET_ALLOWLIST:-}
+      LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-evalboard}
+    depends_on:
+      init:
+        condition: service_completed_successfully
+
+  init:
+    image: evalboard-api:0.1.0
+    command: ["sh", "-c", "uv run --frozen alembic upgrade head && if [ \"$$EVALBOARD_DEMO\" = \"1\" ] || [ \"$$EVALBOARD_DEMO\" = \"true\" ]; then uv run --frozen python -m evalboard.seed; fi"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://evalboard:evalboard_demo@db:5432/evalboard}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-false}
+      EVALBOARD_DEMO: ${EVALBOARD_DEMO:-1}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ./apps/web
+    image: evalboard-web:0.1.0
+    environment:
+      VITE_DEMO_MODE: ${EVALBOARD_DEMO:-1}
+      VITE_API_PROXY_TARGET: http://api:8000
+    depends_on:
+      - api
+    ports:
+      - "127.0.0.1:5173:5173"
+
+volumes:
+  postgres_data:

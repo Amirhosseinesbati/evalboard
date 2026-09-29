@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "kind": "deterministic_fixture_validation",
+  "date": "2026-09-28",
+  "environment": "Windows, bundled Python 3.12.13",
+  "source": "evalboard.dataset.parse_jsonl",
+  "datasets": [
+    {"path": "evals/datasets/known_answer.jsonl", "accepted": 5, "errors": []},
+    {"path": "evals/datasets/invalid_import.jsonl", "accepted": 1, "errors": [{"row": 2, "category": "malformed_json"}, {"row": 3, "category": "duplicate_case_key"}]}
+  ],
+  "scope": "Parser fixtures only; no HTTP import, worker, model, or browser outcome is implied."
+}

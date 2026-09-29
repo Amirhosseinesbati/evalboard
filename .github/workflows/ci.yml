@@ -1,0 +1,136 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: '0.11.28'
+      - name: Install locked API dependencies
+        working-directory: apps/api
+        run: uv sync --frozen
+      - name: Lint Python
+        working-directory: apps/api
+        run: uv run --frozen ruff check .
+      - name: Type-check Python
+        working-directory: apps/api
+        run: uv run --frozen mypy src/evalboard
+      - name: Test Python
+        working-directory: apps/api
+        run: uv run --frozen pytest -q
+      - name: Check synthetic data contract
+        working-directory: apps/api
+        run: uv run --frozen python ../../evals/run_fixtures.py
+      - name: Verify migration on SQLite
+        working-directory: apps/api
+        env:
+          DATABASE_URL: sqlite:///./ci-migration.db
+          EVALBOARD_DEMO: '0'
+        run: uv run --frozen alembic upgrade head
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.19.0
+          run_install: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: apps/web/pnpm-lock.yaml
+      - name: Install locked web dependencies
+        working-directory: apps/web
+        run: pnpm install --frozen-lockfile
+      - name: Lint TypeScript
+        working-directory: apps/web
+        run: pnpm run lint
+      - name: Type-check TypeScript
+        working-directory: apps/web
+        run: pnpm run typecheck
+      - name: Build web
+        working-directory: apps/web
+        run: pnpm run build
+
+  browser:
+    needs: [api, web]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: '0.11.28'
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.19.0
+          run_install: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: apps/web/pnpm-lock.yaml
+      - name: Install locked API dependencies
+        working-directory: apps/api
+        run: uv sync --frozen
+      - name: Install locked web dependencies
+        working-directory: apps/web
+        run: pnpm install --frozen-lockfile
+      - name: Install Chromium for CI
+        working-directory: apps/web
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Validate live API contract and browser journeys
+        timeout-minutes: 10
+        env:
+          CI: '1'
+          DATABASE_URL: sqlite:///./ci-browser.db
+          EVALBOARD_DEMO: '1'
+          VITE_API_PROXY_TARGET: http://127.0.0.1:8010
+        run: |
+          set -euo pipefail
+          (
+            cd apps/api
+            uv run --frozen uvicorn evalboard.main:app --host 127.0.0.1 --port 8010
+          ) > "$RUNNER_TEMP/evalboard-api.log" 2>&1 &
+          api_pid=$!
+          trap 'kill "$api_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:8010/api/v1/health > /dev/null; then break; fi
+            if ! kill -0 "$api_pid" 2>/dev/null; then cat "$RUNNER_TEMP/evalboard-api.log"; exit 1; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:8010/api/v1/health > /dev/null
+          (
+            cd apps/api
+            uv run --frozen python -m evalboard.worker
+          ) > "$RUNNER_TEMP/evalboard-worker.log" 2>&1 &
+          worker_pid=$!
+          trap 'kill "$worker_pid" "$api_pid" 2>/dev/null || true' EXIT
+          cd apps/web
+          pnpm run check:api-contract
+          pnpm run test:e2e --workers=1
+      - name: Save browser failure details
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failure-details
+          if-no-files-found: ignore
+          path: |
+            apps/web/test-results
+            apps/web/playwright-report
+            ${{ runner.temp }}/evalboard-api.log
+            ${{ runner.temp }}/evalboard-worker.log

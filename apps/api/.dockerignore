@@ -1,0 +1,16 @@
+.venv/
+.env*
+*.db
+*.db-shm
+*.db-wal
+*.sqlite3
+.test-tmp/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.uv-cache/
+__pycache__/
+*.py[cod]
+*.log
+tests/
+scripts/

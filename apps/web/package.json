@@ -1,0 +1,39 @@
+{
+  "name": "evalboard-web",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --configLoader native --host 127.0.0.1",
+    "build": "tsc -b && vite build --configLoader native",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test:e2e": "playwright test",
+    "check:api-contract": "node scripts/validate-openapi.mjs",
+    "preview": "vite preview --configLoader native --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.2",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/vite": "^4.1.15",
+    "@types/node": "^24.8.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^10.0.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "tailwindcss": "^4.1.15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vite": "^8.1.0"
+  }
+}

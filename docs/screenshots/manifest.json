@@ -1,0 +1,94 @@
+{
+  "captured_at": "2026-09-28T01:57:54.040Z",
+  "origin": "http://localhost:5173",
+  "screenshots": [
+    {
+      "file": "docs/screenshots/01-datasets-1440.png",
+      "route": "/datasets",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/02-experiment-builder-1024.png",
+      "route": "/experiments/new",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/03-live-run-1440.png",
+      "route": "/experiments/b11baf937ad940bcaf3a3020b7d68668",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "full_page": false,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/04-comparison-1440.png",
+      "route": "/compare/b11baf937ad940bcaf3a3020b7d68668",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/05-failure-explorer-1440.png",
+      "route": "/compare/ffbb959a65674ed290cef354ac557dc2",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/06-release-report-1440.png",
+      "route": "/reports/b11baf937ad940bcaf3a3020b7d68668",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/07-mobile-comparison-390.png",
+      "route": "/compare/b11baf937ad940bcaf3a3020b7d68668",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    },
+    {
+      "file": "docs/screenshots/08-blinded-review-1440.png",
+      "route": "/reviews",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "full_page": true,
+      "horizontal_overflow_px": 0,
+      "issues": []
+    }
+  ]
+}
