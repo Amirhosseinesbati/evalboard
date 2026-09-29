@@ -28,7 +28,13 @@ FastAPI · React · LangGraph · PostgreSQL
 
 ### Evidence and scope
 
-A bundled synthetic run completed 480/480 case executions and 240 paired comparisons; the backend suite recorded 15 passing tests before later additions. The included demo uses synthetic data and local simulators. Deployment and live-provider limits are documented in [implementation status](docs/IMPLEMENTATION_STATUS.md).
+| Evidence | Observed result | Scope |
+| --- | --- | --- |
+| Paired run | 480/480 executions; 240/240 pairs | Bundled deterministic target on versioned synthetic cases |
+| Release gate | 0 regressions; 16 improvements; `pass` | Fixture comparison only |
+| Live-model accuracy and cost | Not measured | Requires a separately budgeted provider run |
+
+The exact run, split, task-level numerators and intervals are in [the evaluation report](docs/EVALUATION.md) and [saved JSON](evals/results/full_bundled_run_2026-09-28.json). These numbers verify the evaluation workflow, not real-model quality. Deployment limits are in [implementation status](docs/IMPLEMENTATION_STATUS.md).
 
 ## Getting started
 
