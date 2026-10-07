@@ -2,7 +2,7 @@
 
 > A reproducible workbench for paired model evaluation.
 
-![EvalBoard product interface](docs/screenshots/04-comparison-1440.png)
+![EvalBoard evaluation workbench with synthetic fixture evidence](docs/screenshots/theme-workbench/overview-dark-1440.png)
 
 [Getting started](#getting-started) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation](docs/EVALUATION.md) · [Security](docs/SECURITY.md)
 
@@ -91,3 +91,16 @@ The Python package includes an SDK and CLI for dataset import, experiment runs, 
 - [Portfolio case study and verified screenshots](docs/PORTFOLIO.md)
 - [Implementation status](docs/IMPLEMENTATION_STATUS.md)
 
+## Workbench and client reuse
+
+The console now opens on an Overview with API-backed workspace evidence and next actions. Experiment history supports shareable search/filter URLs, and the builder includes editable scope presets and a readiness checklist. Appearance supports deployment branding, browser-local palette/density preferences, and validated JSON import/export.
+
+- [Upgrade, assigned-port preview commands, and verification](docs/WORKBENCH_UPGRADE.md)
+- [Client customization and handoff](docs/CLIENT_CUSTOMIZATION.md)
+- [Current desktop and mobile screenshots](docs/screenshots/workbench/manifest.json)
+
+The next design pass adds a tool-focused evaluation workbench, a run ledger, decision evidence, a metric comparison matrix, and a saved-case inspector. **Light / Dark / System** preserves work in progress and uses semantic tokens across the console. See [theme design and verification](docs/THEME_WORKBENCH.md) and [both-theme UI evidence](docs/screenshots/theme-workbench/manifest.json). Earlier changes and screenshots remain available.
+
+## Final mobile reports and connection status
+
+Reports wrap their actions at 320/390px, retain complete metric columns in named keyboard-scrollable regions, and preserve saved JSON/Markdown exports and neutral A4 print styling. The mobile header labels API connection states visibly and accessibly. See [the final workbench handoff and checked scope](docs/THEME_WORKBENCH.md), [mobile report evidence](docs/screenshots/theme-workbench/reports-mobile-manifest.json), and [client customization](docs/CLIENT_CUSTOMIZATION.md). All illustrated cases and results are synthetic.

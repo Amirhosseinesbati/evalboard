@@ -26,3 +26,9 @@ test-results/
 
 # Local product brief; excluded from the public portfolio repository.
 /06-evalboard.md
+
+# Private environment files and local publication receipts
+.env.*
+!.env.example
+!**/.env.example
+**/library-files.json

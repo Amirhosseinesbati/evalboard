@@ -16,6 +16,10 @@ export default tseslint.config(
     },
   },
   {
+    files: ['public/theme-init.js'],
+    languageOptions: { globals: { localStorage: 'readonly', window: 'readonly', document: 'readonly' } },
+  },
+  {
     files: ['scripts/**/*.mjs'],
     languageOptions: { globals: { process: 'readonly', fetch: 'readonly', console: 'readonly' } },
   },

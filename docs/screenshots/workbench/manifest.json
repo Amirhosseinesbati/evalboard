@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-10-06T15:57:17.780Z",
+  "origin": "http://127.0.0.1:4313",
+  "scope": "Isolated synthetic local demonstration; user local Chrome, headless, fresh context",
+  "screenshots": [
+    {
+      "file": "overview-1440.png",
+      "route": "/overview",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-390.png",
+      "route": "/overview",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "appearance-1440.png",
+      "route": "/appearance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "appearance-390.png",
+      "route": "/appearance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "appearance-import-error-390.png",
+      "route": "/appearance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "history-1440.png",
+      "route": "/experiments?q=Timeout",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "builder-1024.png",
+      "route": "/experiments/new",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "mobile-navigation-390.png",
+      "route": "/overview",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontal_overflow_px": 0,
+      "errors": []
+    }
+  ]
+}

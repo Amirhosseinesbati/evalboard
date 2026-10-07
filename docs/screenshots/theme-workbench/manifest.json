@@ -1,0 +1,343 @@
+{
+  "captured_at": "2026-10-07T19:36:20.047Z",
+  "origin": "http://127.0.0.1:4313",
+  "scope": "Synthetic local QA database; isolated user local Chrome, headless; no live provider calls",
+  "screenshots": [
+    {
+      "file": "overview-dark-1440.png",
+      "route": "/overview",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "comparison-dark-1440.png",
+      "route": "/compare/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-dark-390.png",
+      "route": "/overview",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "comparison-dark-390.png",
+      "route": "/compare/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-dark-1024.png",
+      "route": "/overview",
+      "theme": "dark",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-dark-768.png",
+      "route": "/overview",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "inspector-dark-1440.png",
+      "route": "/compare/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "viewport, fixed dialog",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "failure-inspector-dark-390.png",
+      "route": "/compare/23d682fea4f74ecb8c984fe0862650bf",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "viewport, fixed dialog",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "mobile-navigation-dark-390.png",
+      "route": "/overview",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "viewport, fixed dialog",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "builder-dark-1024.png",
+      "route": "/experiments/new",
+      "theme": "dark",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "dataset-dark-1440.png",
+      "route": "/datasets/9c5ba0930b4b474e97a96fc636455324",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "reviews-dark-1440.png",
+      "route": "/reviews",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "report-dark-1440.png",
+      "route": "/reports/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "appearance-error-dark-390.png",
+      "route": "/appearance",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-light-1440.png",
+      "route": "/overview",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "comparison-light-1440.png",
+      "route": "/compare/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-light-390.png",
+      "route": "/overview",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "comparison-light-390.png",
+      "route": "/compare/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-light-1024.png",
+      "route": "/overview",
+      "theme": "light",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "overview-light-768.png",
+      "route": "/overview",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "inspector-light-1440.png",
+      "route": "/compare/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "viewport, fixed dialog",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "failure-inspector-light-390.png",
+      "route": "/compare/23d682fea4f74ecb8c984fe0862650bf",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "viewport, fixed dialog",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "mobile-navigation-light-390.png",
+      "route": "/overview",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "viewport, fixed dialog",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "builder-light-1024.png",
+      "route": "/experiments/new",
+      "theme": "light",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "dataset-light-1440.png",
+      "route": "/datasets/9c5ba0930b4b474e97a96fc636455324",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "reviews-light-1440.png",
+      "route": "/reviews",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "report-light-1440.png",
+      "route": "/reports/55592e16131847cca1bdf496c1d7a14a",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    },
+    {
+      "file": "appearance-error-light-390.png",
+      "route": "/appearance",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "full page",
+      "horizontal_overflow_px": 0,
+      "errors": []
+    }
+  ]
+}

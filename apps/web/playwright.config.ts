@@ -19,7 +19,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   webServer: {
-    command: 'pnpm dev --host 127.0.0.1',
+    command: `node node_modules/vite/bin/vite.js --configLoader native --host 127.0.0.1 --port ${new URL(baseURL).port || '5173'} --strictPort`,
     url: baseURL,
     reuseExistingServer: true,
     timeout: 60_000,

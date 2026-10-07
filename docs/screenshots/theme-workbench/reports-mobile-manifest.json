@@ -1,0 +1,103 @@
+{
+  "source": "Actual isolated headless user-local Chrome; synthetic saved report, no live provider calls",
+  "captures": [
+    {
+      "filename": "reports-dark-320.png",
+      "width": 320,
+      "theme": "dark",
+      "documentOverflow": 0,
+      "tables": [
+        {
+          "clientWidth": 248,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Task-specific paired correctness table, scroll horizontally for all columns"
+        },
+        {
+          "clientWidth": 248,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Applicable metrics table, scroll horizontally for all columns"
+        }
+      ]
+    },
+    {
+      "filename": "reports-light-320.png",
+      "width": 320,
+      "theme": "light",
+      "documentOverflow": 0,
+      "tables": [
+        {
+          "clientWidth": 248,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Task-specific paired correctness table, scroll horizontally for all columns"
+        },
+        {
+          "clientWidth": 248,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Applicable metrics table, scroll horizontally for all columns"
+        }
+      ]
+    },
+    {
+      "filename": "reports-dark-390.png",
+      "width": 390,
+      "theme": "dark",
+      "documentOverflow": 0,
+      "tables": [
+        {
+          "clientWidth": 318,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Task-specific paired correctness table, scroll horizontally for all columns"
+        },
+        {
+          "clientWidth": 318,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Applicable metrics table, scroll horizontally for all columns"
+        }
+      ]
+    },
+    {
+      "filename": "reports-light-390.png",
+      "width": 390,
+      "theme": "light",
+      "documentOverflow": 0,
+      "tables": [
+        {
+          "clientWidth": 318,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Task-specific paired correctness table, scroll horizontally for all columns"
+        },
+        {
+          "clientWidth": 318,
+          "scrollWidth": 480,
+          "focusable": true,
+          "label": "Applicable metrics table, scroll horizontally for all columns"
+        }
+      ]
+    }
+  ],
+  "printCaptures": [
+    "reports-print-from-dark-390.png",
+    "reports-print-a4.png"
+  ],
+  "printLayout": {
+    "documentOverflow": 0,
+    "tables": [
+      {
+        "clientWidth": 744,
+        "scrollWidth": 744
+      },
+      {
+        "clientWidth": 744,
+        "scrollWidth": 744
+      }
+    ]
+  },
+  "pageAndConsoleErrors": []
+}
